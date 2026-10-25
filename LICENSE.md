@@ -8,4 +8,4 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 Authors/contributors:
 - UnderscoredScore
 - TheCoolAdorProductions
-- aBengalTiger
+- 1Thebengaltiger
