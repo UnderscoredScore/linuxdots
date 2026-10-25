@@ -1,0 +1,74 @@
+name: Bug report
+description: Something is broken or behaving strangely on linuxdots
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug. Please fill in as much as you can.
+        If the site works but a specific rice looks wrong, use the **Add dotfiles** template instead.
+
+  - type: input
+    id: url
+    attributes:
+      label: Page URL
+      description: Where did the bug happen?
+      placeholder: https://linuxdots.pages.dev/...
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: A short description of the bug.
+      placeholder: I clicked X, expected Y, got Z.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Go to ...
+        2. Click ...
+        3. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      placeholder: What did you think would happen?
+    validations:
+      required: true
+
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and version
+      placeholder: Firefox 132, Chrome 131, Safari 18...
+    validations:
+      required: true
+
+  - type: input
+    id: os
+    attributes:
+      label: Operating system
+      placeholder: Arch Linux, macOS 15, Windows 11...
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots or screen recording
+      description: Drag and drop images here if they help explain the bug.
+
+  - type: textarea
+    id: console
+    attributes:
+      label: Console errors (optional)
+      description: Open DevTools → Console and paste any red errors.
+      render: shell

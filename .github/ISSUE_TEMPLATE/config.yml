@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Contributing guide
+    url: https://github.com/UnderscoredScore/linuxdots/blob/main/CONTRIBUTING.md
+    about: How to add a rice or fix a bug via pull request.
+  - name: Discussions
+    url: https://github.com/UnderscoredScore/linuxdots/discussions
+    about: Ask questions or share setups that aren't ready to be listed yet.

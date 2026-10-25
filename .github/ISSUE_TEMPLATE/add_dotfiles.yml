@@ -1,0 +1,119 @@
+name: Add dotfiles
+description: Submit a rice to be listed on linuxdots
+title: "[rice] "
+labels: ["rice-submission"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Want your rice listed on linuxdots? Fill this out. You can also open a PR directly
+        editing `src/data/dotfiles.ts` — see CONTRIBUTING.md for the exact schema.
+
+  - type: input
+    id: name
+    attributes:
+      label: Project name
+      placeholder: Glyph, HYPER·AERO, dots-hyprland...
+    validations:
+      required: true
+
+  - type: input
+    id: author
+    attributes:
+      label: Author / GitHub handle
+      placeholder: Nebelung-cloud
+    validations:
+      required: true
+
+  - type: input
+    id: repo
+    attributes:
+      label: Repository URL
+      description: Public GitHub (or GitLab/Codeberg) link to the dotfiles.
+      placeholder: https://github.com/user/repo
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Short description
+      description: One or two sentences. This shows on the card.
+      placeholder: A Nothing OS-inspired rice for Hyprland and Quickshell.
+    validations:
+      required: true
+
+  - type: textarea
+    id: long-description
+    attributes:
+      label: Long description (optional)
+      description: Shown on the detail page. What makes this rice special?
+
+  - type: dropdown
+    id: distro
+    attributes:
+      label: Distribution
+      options:
+        - Arch
+        - Fedora
+        - Debian
+        - Ubuntu
+        - Other (specify in description)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: wm
+    attributes:
+      label: Window manager / Desktop environment
+      options:
+        - Hyprland
+        - Niri
+        - i3
+        - Sway
+        - KDE
+        - GNOME
+        - Other (specify in description)
+    validations:
+      required: true
+
+  - type: input
+    id: tags
+    attributes:
+      label: Tags
+      description: Comma-separated. See the `Tag` type in the repo for valid values.
+      placeholder: dark, minimal, rounded, wayland
+    validations:
+      required: true
+
+  - type: input
+    id: thumbnail
+    attributes:
+      label: Thumbnail image URL
+      description: Direct link to a 16:9 preview image. GitHub raw URLs work best.
+      placeholder: https://raw.githubusercontent.com/...
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshot URLs
+      description: One URL per line. These appear in the detail-page gallery.
+      placeholder: |
+        https://raw.githubusercontent.com/.../desktop.png
+        https://raw.githubusercontent.com/.../launcher.png
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Confirmations
+      options:
+        - label: The repository is publicly accessible.
+          required: true
+        - label: The screenshots are mine or I have permission to use them.
+          required: true
+        - label: The project is currently maintained (last commit within ~12 months).
+          required: true
