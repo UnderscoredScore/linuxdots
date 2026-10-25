@@ -47,13 +47,13 @@ Every entry in `src/data/dotfiles.ts` matches this shape (see [`src/types/dotfil
   author: string;                // GitHub handle, no @
   description: string;           // one line, shown on the card
   longDescription?: string;      // optional, shown in the detail modal
-  distro: Distro;                // "Arch" | "Fedora" | "Debian" | "Ubuntu"
+  distro: Distro;                // "Arch" | "Fedora" | "Debian" | "Ubuntu" | "CachyOS"
   wm: WM;                        // "Hyprland" | "Niri" | "i3" | "Sway" | "KDE" | "GNOME"
   tags: Tag[];                   // see the Tag union below
   screenshots: string[];         // ordered list, first one is the hero
   thumbnail: string;             // usually screenshots[0], can be a smaller version
   repoUrl?: string;
-  featured?: boolean;            // do not add this unless a maintainer asks
+  featured?: boolean;            // add this only if you are adding your own dot files and you want to be featured
   hidden?: boolean;              // set to true to keep the entry but hide it from the gallery
   components?: string[];         // reserved for the future Components section
 }
@@ -61,7 +61,7 @@ Every entry in `src/data/dotfiles.ts` matches this shape (see [`src/types/dotfil
 
 ### Valid values
 
-**`distro`**: `Arch`, `Fedora`, `Debian`, `Ubuntu`
+**`distro`**: `Arch`, `Fedora`, `Debian`, `Ubuntu`, `CachyOS`
 
 **`wm`**: `Hyprland`, `Niri`, `i3`, `Sway`, `KDE`, `GNOME`
 
@@ -134,7 +134,7 @@ The site runs at `http://localhost:5173`.
 - If you changed data, check the gallery renders, filters work, and the detail modal opens.
 - If you changed UI, check both light and dark themes and at least one custom theme like Catppuccin or Dracula.
 
-### Project layout
+### Project layout (for understanding how it is built)
 
 ```
 src/
@@ -185,7 +185,7 @@ Screenshots help but are not required for obvious bugs.
 ## What we will not accept
 
 - Rices that are not public repos
-- AI-generated or mockup screenshots instead of real ones
+- Mockup or Fake screenshots instead of real ones (Screenshots must be the )
 - Self-promotion that does not match the schema (blog posts, YouTube channels, affiliate links)
 - Removal requests from anyone other than the repo owner or screenshot copyright holder
 
