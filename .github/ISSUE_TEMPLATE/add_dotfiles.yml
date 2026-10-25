@@ -7,7 +7,7 @@ body:
     attributes:
       value: |
         Want your rice listed on linuxdots? Fill this out. You can also open a PR directly
-        editing `src/data/dotfiles.ts` — see CONTRIBUTING.md for the exact schema.
+        editing `src/data/dotfiles.ts` check out CONTRIBUTING.md for the exact schema.
 
   - type: input
     id: name
@@ -90,7 +90,7 @@ body:
     id: thumbnail
     attributes:
       label: Thumbnail image URL
-      description: Direct link to a 16:9 preview image. GitHub raw URLs work best.
+      description: Direct link to a 16:9 preview image. GitHub raw URLs work well
       placeholder: https://raw.githubusercontent.com/...
     validations:
       required: true

@@ -14,7 +14,7 @@ body:
     attributes:
       label: Page URL
       description: Where did the bug happen?
-      placeholder: https://linuxdots.pages.dev/...
+      placeholder: https://linuxdots.us.ci/...
     validations:
       required: true
 
@@ -23,7 +23,7 @@ body:
     attributes:
       label: What happened?
       description: A short description of the bug.
-      placeholder: I clicked X, expected Y, got Z.
+      placeholder: I clicked A, expected C, got B.
     validations:
       required: true
 
@@ -70,5 +70,5 @@ body:
     id: console
     attributes:
       label: Console errors (optional)
-      description: Open DevTools → Console and paste any red errors.
+      description: Open DevTools > Console and paste any errors (should be marked in red).
       render: shell

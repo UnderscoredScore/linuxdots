@@ -52,7 +52,7 @@ Every entry in `src/data/dotfiles.ts` matches this shape (see [`src/types/dotfil
   tags: Tag[];                   // see the Tag union below
   screenshots: string[];         // ordered list, first one is the hero
   thumbnail: string;             // usually screenshots[0], can be a smaller version
-  repoUrl?: string;
+  repoUrl?: string;              // add the repo url of the rice (it's required btw)
   featured?: boolean;            // add this only if you are adding your own dot files and you want to be featured
   hidden?: boolean;              // set to true to keep the entry but hide it from the gallery
   components?: string[];         // reserved for the future Components section
@@ -134,29 +134,6 @@ The site runs at `http://localhost:5173`.
 - If you changed data, check the gallery renders, filters work, and the detail modal opens.
 - If you changed UI, check both light and dark themes and at least one custom theme like Catppuccin or Dracula.
 
-### Project layout (for understanding how it is built)
-
-```
-src/
-├── main.tsx
-├── App.tsx
-├── index.css
-├── assets/                 brand logos, etc.
-├── types/dotfiles.ts       all TypeScript types
-├── data/
-│   ├── dotfiles.ts         every listed rice
-│   └── themes.ts           site theme list
-├── context/
-│   └── SettingsContext.tsx theme and font state
-├── pages/
-│   └── DotfileExplorer.tsx main page
-└── components/
-    ├── brand/              BrandLogo, PlatformIcon
-    ├── shared/             Modal
-    ├── dotfiles/           Card, Gallery, Detail, FilterBar, SearchBar, Tag
-    └── settings/           SettingsPanel
-```
-
 ### Code style
 
 - Prettier handles formatting. Do not hand-format.
@@ -185,8 +162,8 @@ Screenshots help but are not required for obvious bugs.
 ## What we will not accept
 
 - Rices that are not public repos
-- Mockup or Fake screenshots instead of real ones (Screenshots must be the )
-- Self-promotion that does not match the schema (blog posts, YouTube channels, affiliate links)
+- Mockup or Fake screenshots instead of real ones (The screenshots should match the rice's looks)
+- Self-promotion that does not match the schema (blog posts, yt channels, affiliate links etc.)
 - Removal requests from anyone other than the repo owner or screenshot copyright holder
 
 ---
