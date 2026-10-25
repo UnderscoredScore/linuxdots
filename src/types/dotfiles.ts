@@ -32,6 +32,7 @@ export interface DotfileProject {
   screenshots: string[];
   thumbnail: string;
   repoUrl?: string;
+  downloadUrl?: string;
   featured?: boolean;
   components?: string[];
   hidden?: boolean;
